@@ -7,9 +7,14 @@ WORKDIR /app
 # 3. Copy only dependency file first (for Docker caching)
 COPY requirements.txt .
 
-# 4. Install Python dependencies (add curl if you use MLflow local tracking URI)
-RUN pip install --upgrade pip \
+# 4. Install build tools and Python dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    python3-dev \
+    gcc \
+    && pip install --upgrade pip \
     && pip install -r requirements.txt \
+    && apt-get purge -y --auto-remove build-essential python3-dev gcc \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # 5. Copy the entire project into the image
