@@ -8,6 +8,11 @@
 [![Docker](https://img.shields.io/badge/Docker-3.11--slim-blue.svg?logo=docker)](https://www.docker.com/)
 [![AWS EC2](https://img.shields.io/badge/AWS-EC2--Free--Tier-FF9900.svg?logo=amazon-aws)](https://aws.amazon.com/ec2/)
 
+> [!TIP]
+> **🚀 Live Demo**: Access the live running application on AWS:
+> * **Interactive Web UI (Gradio)**: [http://3.80.33.133:8000/ui](http://3.80.33.133:8000/ui)
+> * **REST API Documentation (FastAPI)**: [http://3.80.33.133:8000/docs](http://3.80.33.133:8000/docs)
+
 An end-to-end productionized machine learning system for predicting customer churn. This project moves away from chaotic notebooks, establishing a modular MLOps architecture featuring rigorous **data quality checks**, **hyperparameter optimization**, **experiment tracking**, **containerized serving**, and a **CI/CD pipeline** deployed to a free-tier **AWS EC2** instance.
 
 ---
@@ -191,4 +196,4 @@ To deploy this project to AWS EC2 for free:
    * `EC2_USERNAME`: Usually `ubuntu`.
    * `EC2_SSH_KEY`: The contents of your private SSH key (`.pem` file) used to access the instance.
 
-For step-by-step instructions on AWS setup and secrets configuration, refer to the [AWS EC2 Deployment Guide](file:///C:/Users/HP/.gemini/antigravity/brain/26a2ccb5-ad19-4045-8565-073da94b4fee/aws_ec2_deployment_guide.md).
+For step-by-step instructions on AWS setup and secrets configuration, refer to the [AWS EC2 Deployment Guide](docs/aws_ec2_deployment_guide.md).
